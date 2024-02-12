@@ -29,7 +29,7 @@ const ShopContextProvider = (props) => {
     }));
   };
 
-  const contextValues = { cartItems, addToCart, removeFromCart };
+  const contextValues = { cartItems, setCartItems, addToCart, removeFromCart };
 
   //   console.log(cartItems);
 
