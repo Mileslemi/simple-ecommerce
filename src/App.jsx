@@ -3,18 +3,21 @@ import "./App.css";
 import Navbar from "./components/navbar";
 import Shop from "./pages/shop/shop";
 import Cart from "./pages/cart/cart";
+import ShopContextProvider from "./context/shopContext";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        {/* put navbar here to be accessible all through */}
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Shop />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </Router>
+      <ShopContextProvider>
+        <Router>
+          {/* put navbar here to be accessible all through */}
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Shop />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </Router>
+      </ShopContextProvider>
     </div>
   );
 }
