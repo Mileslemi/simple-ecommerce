@@ -1,0 +1,2 @@
+installed phosphor-react - for icons
+react-router dom - for routing
